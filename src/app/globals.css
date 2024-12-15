@@ -1,21 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Work Sans", sans-serif;
+  background-color: white;
+}
+@layer components {
+  .container-modified {
+    @apply max-w-[1568px] w-full mx-auto px-4;
+  }
+  /* LI-ITEMS */
+  .header-li {
+    @apply common-text w-fit duration-300 relative after:w-0 after:h-[1px] after:absolute after:-bottom-1 after:left-1/2 after:translate-x-[-50%] after:content-[''] after:duration-300 hover:after:w-full after:bg-white after:header-li-hover;
+  }
+  .header-li-hover {
+    background: var(
+      --gradient-1,
+      linear-gradient(90deg, #6b7eef 0%, #cb6ce6 100%)
+    );
+  }
+  /* BUTTONS */
+  .primary-button {
+    @apply text-base font-semibold text-white md:px-4 px-3 h-[38px] rounded-lg flex items-center justify-center common-text primary-button-bg;
+  }
+  .primary-button-bg {
+    background: var(
+      --gradient-1,
+      linear-gradient(90deg, #6b7eef 0%, #cb6ce6 100%)
+    );
+  }
+  /* COMMON-TEXT */
+  .common-text {
+    @apply text-primary font-semibold leading-[125%] sm:text-base text-sm;
+  }
+  /* HEADINGS */
+  .heading {
+    @apply xl:text-5xl lg:text-4xl md:text-3xl text-2xl font-bold !leading-[130%] text-primary;
+  }
+  .sub-heading {
+    @apply sm:text-base text-sm font-normal !leading-[150%] text-primary opacity-[0.7];
+  }
+  .advance-feature-heading {
+    @apply 2xl:text-2xl lg:text-xl text-lg font-bold leading-[130%] text-primary;
+  }
+  .advance-feature-sub-heading {
+    @apply sm:text-sm text-xs leading-[150%] text-primary opacity-[0.7];
+  }
 }
