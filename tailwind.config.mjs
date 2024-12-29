@@ -27,6 +27,7 @@ export default {
         flintstone: "#697484",
         lavendar: "#F0F1F3",
         chateau: "#A5ACB5",
+        fantastic: "#2B384C",
         pale: "#edd8ff80",
         lilac: "#da4df166",
         seafoam: "#c4f5e9b3",
@@ -34,7 +35,8 @@ export default {
       boxShadow: {
         c1: "0px 24px 116px 0px rgba(43, 56, 76, 0.09)",
         c2: "0px 36px 105px 0px rgba(43, 56, 76, 0.10)",
-        c3: "0px 12px 64px 0px rgba(28, 25, 25, 0.12);",
+        c3: "0px 12px 64px 0px rgba(28, 25, 25, 0.12)",
+        c4: "0px 32px 96px 0px rgba(28, 25, 25, 0.16)",
       },
     },
   },
